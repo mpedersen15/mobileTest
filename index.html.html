@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+	
+</head>
+<body>
+<div data-role="page" id="page1">
+	<div data-role="content">
+		Check it out! Page 1.
+		<a href="#page2" data-role="button">Next</a>
+	</div>
+
+</div>
+<div data-role="page" id="page2">
+	<div data-role="content">
+		Uh oh... Page 2!
+		<div data-role="footer"
+		<a href="#page1" data-role="button">Back</a>
+		<a href="#page3" data-role="button">Next</a>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="content">
+		Could it be? Page 3!
+		<a href="#page2" data-role="button">Back</a>
+	</div>
+</div>
+</body>
+</html>
