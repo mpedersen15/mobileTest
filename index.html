@@ -4,26 +4,53 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+	<style>
+		.ui-slider-input {
+			display : none !important;
+		}
+		.ui-slider {
+			display : inline-block;
+			width: 300px;
+			margin-left: -50px !important;
+			/*outline: 2px blue dashed; */
+		}
+		.extreme{
+			display:inline-block;
+			width:200px;
+			text-align: justify;
+		}
+		.sliderQuestion{
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		.sliderQuestion > *{
+			vertical-align: middle;
+		}
+		.center{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-<div data-role="page" id="page1">
+<div data-role="page" id="welcome">
 	<div data-role="content">
-		<div data-role="header" style="margin-top:0" data-position="fixed" class="ui-btn"><p>i2i</p></div>
+		<div data-role="header" style="margin-top:0;font-size:2em" data-position="fixed"><p>i2i</p></div>
 		<div style="text-align:center">
 		<h3>Bring the social to social networking</h3>
 		<p>Welcome to i2i</p>
 		<p>Sign up or log in below</p>
 		</div>
 		<div data-role="footer" style="margin-bottom:0" data-position="fixed" class="ui-btn">
-		<a href="#page2" data-role="button" data-transition="slide">Sign Up</a>
-		<a href="#page3" data-role="button" data-transition="slide">Log In</a>
+		<a href="#signup" data-role="button" data-transition="slide">Sign Up</a>
+		<a href="#login" data-role="button" data-transition="slide">Log In</a>
 		</div>
 	</div>
 
 </div>
-<div data-role="page" id="page2">
+
+<div data-role="page" id="signup">
 	<div data-role="content">
-		<div data-role="header" style="margin-top:0" data-position="fixed" class="ui-btn"><p>i2i</p></div>
+		<div data-role="header" style="margin-top:0;font-size:2em" data-position="fixed" ><p>i2i</p></div>
 		<h3>Create an i2i account</h3>
 		<form method="post" action="">
 			<label for="firstName">First Name</label><input type="text" name="firstName" id="firstName" />
@@ -37,13 +64,14 @@
 		</form>
 		<div data-role="footer" style="margin-bottom:0" class="ui-btn" data-position="fixed">
 		<a href="#" data-role="button" data-rel="back" data-transition="slide">Back</a>
-		<a href="#page4" data-role="button" data-transition="slide">Next</a>
+		<a href="#survey1" data-role="button" data-transition="slide">Next</a>
 		</div>
 	</div>
 </div>
-<div data-role="page" id="page3">
+
+<div data-role="page" id="login">
 	<div data-role="content">
-		<div data-role="header" style="margin-top:0" data-position="fixed" class="ui-btn"><p>i2i</p></div>
+		<div data-role="header" style="margin-top:0;font-size:2em" data-position="fixed" ><p>i2i</p></div>
 		<h3>Log in to your i2i account</h3>
 		<form method="post" action="">
 			<label for="email">Email Address</label><input type="text" name="email" id="email" />
@@ -51,9 +79,46 @@
 		</form>
 		<div data-role="footer" style="margin-bottom:0" class="ui-btn" data-position="fixed">
 		<a href="#" data-role="button" data-rel="back" data-transition="slide">Back</a>
-		<a href="#page2" data-role="button" data-transition="slide">Next</a>
+		<a href="#profile" data-role="button" data-transition="slide">Next</a>
 		</div>
 	</div>
 </div>
+
+<div data-role="page" id="survey1">
+	<div data-role="content">
+		<div data-role="header" style="margin-top:0;font-size:2em" data-position="fixed" ><p>i2i</p></div>
+		<h3>On the Weekend</h3>
+		<form method="post" action="">
+		
+			<h4 class="center">When I'm planning a vacation...</h4>
+			<div class="sliderQuestion">
+				<div class="extreme">I want to relax! Sitting poolside with a pina colada sounds like the ideal break to me</div>
+				<input type="range" min = "0" max = "8" data-mini="true" name="question1" style="display:inline-block">
+				<div class="extreme">I want to be a tourist! No lounging for me - I want to see all the sights!</div>
+			</div>
+			
+			<h4 class="center">On a night that I don't feel like cooking, and want to eat out...</h4>
+			<div class="sliderQuestion">
+				<div class="extreme">I make a beeline for the local burger joint and gorge myself on some delicious comfort fast food</div>
+				<input type="range" min = "0" max = "8" data-mini="true" name="question1" style="display:inline-block">
+				<div class="extreme">I make reservations at the classy, chic new bistro/wine bar and head downtown dressed to the nines</div>
+			</div>
+			
+			<h4 class="center">If I have a few free hours, and a good book in my hand...</h4>
+			<div class="sliderQuestion">
+				<div class="extreme">I'm going to put it back on the shelf. Television was invented for a reason, you know</div>
+				<input type="range" min = "0" max = "8" data-mini="true" name="question1" style="display:inline-block">
+				<div class="extreme">I'll grab a few more to add to it and get comfortable - I won't be moving for while</div>
+			</div>
+			
+		</form>
+		<div data-role="footer" style="margin-bottom:0" class="ui-btn" data-position="fixed">
+		<a href="#" data-role="button" data-rel="back" data-transition="slide">Back</a>
+		<a href="#profile" data-role="button" data-transition="slide">Next</a>
+		</div>
+	</div>
+</div>
+
+
 </body>
 </html>
